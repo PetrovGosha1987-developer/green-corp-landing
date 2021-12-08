@@ -9,6 +9,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .header__logo {
@@ -42,9 +46,20 @@ button {
   width: 500px;
 }
  
+@keyframes rotation {
+  0%{
+    transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
 .about__sun-image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute;
 }
 
 .about {
@@ -173,7 +188,6 @@ footer {
   padding-right: 20px;
   font-size: 16px;
   font-weight: 600;
-
 }
 
 .footer__container {
@@ -204,4 +218,91 @@ footer {
 
 .footer__links a {
   margin-bottom: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 719px) {
+  header {
+    padding: 10px;
+}
+.header__logo {
+    height: 20px;
+}
+header a {
+    margin-right: 10px;
+}
+.about {
+    flex-direction: column-reverse;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+.about__image {
+    width: 280px;
+}
+.about__sun-image {
+    width: 75px;
+    height: 75px;
+}
+.form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.form h1 {
+    font-size: 36px;
+}
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.footer__container {
+    flex-direction: column;
+}
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+  header {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.header__logo {
+    height: 20px;
+}
+header a {
+    margin-right: 20px;
+}
+.about {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+.about__image {
+    width: 280px;
+}
+.about__sun-image {
+    width: 75px;
+    height: 75px;
+}
+.form {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.form h1 {
+    font-size: 36px;
+}
+footer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 }
